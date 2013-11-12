@@ -18,3 +18,7 @@ To create a two-way binding between localStorage and a controller's $scope, all 
     }]);
 
 Once that's done, any changes to $scope.model will propagate to localStorage.model and also the other way around. And because localStorage events are cross-window this will also create a cross-window binding.
+
+Also, in case you don't want to use the same name in localStorage you can call Store#mirror as follows
+
+    $scope.model = Store.mirror($scope, "model", "totallyCustomName") || {};
