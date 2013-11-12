@@ -77,7 +77,7 @@ app.service("Store", ["$window", function ($window) {
 			if(watched[storeKey].length == 0){
 				delete watched[storeKey];
 			}
-        });
+		});
 
 		// watch for changes from $scope
 		$scope.$watch(scopeKey, function(newValue, oldValue){
@@ -99,6 +99,6 @@ app.service("Store", ["$window", function ($window) {
 
 	};
 
-    return this;
+	return this;
 
 }]);
