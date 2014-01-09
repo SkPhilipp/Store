@@ -13,7 +13,7 @@ To create a two-way binding between localStorage and a controller's $scope, all 
      */
     app.controller("MyController", ["$scope", "Store", function($scope, Store) {
     
-	    $scope.model = Store.mirror($scope, "model") || {};
+	    $scope.model = Store.mirror($scope, "model", {});
     
     }]);
 
