@@ -21,4 +21,4 @@ Once that's done, any changes to $scope.model will propagate to localStorage.mod
 
 Also, in case you don't want to use the same name in localStorage you can call Store#mirror as follows
 
-    $scope.model = Store.mirror($scope, "model", "totallyCustomName") || {};
+    $scope.model = Store.mirror($scope, "model", "totallyCustomName", {});
