@@ -62,28 +62,12 @@ angular.module("SkP", []).provider("Store", function () {
 		 * Uses $watch to compare for equality, not reference.
 		 * 
 		 * Do not use primitive types as values for 'defaults'.
-		 * 
-		 * Can be invoked with the following types:
-		 * (object, string, string, object)
-		 * (object, string, string) < preferred
-		 * (object, string, object)
-		 * (object, string)
 		 */
 		this.mirror = function($scope, scopeKey, storeKey, defaults){
 
-			// when storeKey parameter is ommitted
-			if(!(typeof storeKey == "string")){
-				storeKey = scopeKey;
-			}
-
-			// using second type of overload
-			if(defaults == undefined && typeof storeKey == "object"){
-				defaults = storeKey;
-			}
-
 			if(typeof defaults != "object"){
 				if(defaults != null){
-					console.warn("Mirroring primitives or non-object types is not supported.");
+					throw new Error("Mirroring primitives or non-object types is not supported.");
 				}
 				defaults = {};
 			}
