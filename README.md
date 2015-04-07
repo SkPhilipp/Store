@@ -1,6 +1,9 @@
 Store
 =====
 
+
+_This project is no longer maintained and part of my source code "attic". Please use a [more mature and tested alternative](https://github.com/grevory/angular-local-storage). Feel free to use this though, works fine._
+
 An Angular service providing two way binding to localStorage
 
 Examples
